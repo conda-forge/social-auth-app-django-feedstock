@@ -15,17 +15,16 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
-    - six
-    - social-auth-core >=3.3.0
+    - python >=3.6
+    - social-auth-core >=4.1.0
 
 test:
   imports:
     - social_django
-    - social_django.migrations
+    - social_django.management
   commands:
     - pip check
   requires:
