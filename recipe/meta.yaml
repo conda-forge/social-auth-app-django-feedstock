@@ -1,4 +1,4 @@
-{% set version = "5.0.0" %}
+{% set version = "5.1.0" %}
 
 package:
   name: social-auth-app-django
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/social-auth-app-django/social-auth-app-django-{{ version }}.tar.gz
-  sha256: b6e3132ce087cdd6e1707aeb1b588be41d318408fcf6395435da0bc6fe9a9795
+  sha256: fdf1dc6bcb8b457001d88d2279f637bc9955f1aedf750c627784bb5104601b1c
 
 build:
   number: 0
