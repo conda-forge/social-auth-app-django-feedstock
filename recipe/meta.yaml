@@ -1,27 +1,29 @@
+{% set python_min = "3.10" %}
+{% set name = "social-auth-app-django" %}
 {% set version = "5.5.1" %}
 
 package:
-  name: social-auth-app-django
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/s/social-auth-app-django/social_auth_app_django-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/social_auth_app_django-{{ version }}.tar.gz
   sha256: a1435c17227d07d690b06cca54ea47d4ed939de4749dac45dd4393c8a98dac17
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools
+    - setuptools >=78.0.2
     - pip
   run:
     - python >={{ python_min }}
-    - django
-    - social-auth-core >=4.1.0
+    - django >=5.1
+    - social-auth-core >=4.4,<5.dev0
 
 test:
   imports:
