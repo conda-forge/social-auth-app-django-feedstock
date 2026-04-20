@@ -1,6 +1,6 @@
 {% set python_min = "3.10" %}
 {% set name = "social-auth-app-django" %}
-{% set version = "5.7.0" %}
+{% set version = "5.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/social_auth_app_django-{{ version }}.tar.gz
-  sha256: c0cc118d1bb935dbf02acb8a57fabd7b07694452fce755a5956282c69f019c79
+  sha256: 512d4a0f28f29d961badad14ed9b7247e4b3f870ed8f261035735a7ac69f4455
 
 build:
   noarch: python
