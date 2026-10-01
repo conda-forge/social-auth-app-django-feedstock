@@ -1,0 +1,47 @@
+schema_version: 1
+
+context:
+  version: "6.1.0"
+
+package:
+  name: social-auth-app-django
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/s/social-auth-app-django/social_auth_app_django-${{ version }}.tar.gz
+  sha256: 7ce0489710f450dafd652833eea833505ccf5dacda6b188daa8bf90038986557
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=78.0.2
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - asgiref >=3.8.1
+    - django >=5.2
+    - social-auth-core >=5.2.0,<6.0.0
+
+tests:
+  - python:
+      imports:
+        - social_django
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  summary: Python Social Authentication, Django integration.
+  license: BSD-3-Clause
+  license_file: LICENSE
+  homepage: https://github.com/python-social-auth/social-app-django
+
+extra:
+  recipe-maintainers:
+    - ocefpaf
