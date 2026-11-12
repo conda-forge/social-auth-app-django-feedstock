@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 8.0.0
+  version: 8.1.0
 
 package:
   name: social-auth-app-django
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/s/social-auth-app-django/social_auth_app_django-${{ version }}.tar.gz
-  sha256: 501a25e595aacfd3007c1b458fc1909a98ba1b7853b8563f807da86c2a7c3e6b
+  sha256: df67120883ca1cbeb71843159b042ac82f719d4f777082a350ad94e4b3f74811
 
 build:
   number: 0
@@ -25,7 +25,7 @@ requirements:
     - python >=${{ python_min }}
     - asgiref >=3.8.1
     - django >=5.2
-    - social-auth-core >=7.0.0,<8.0.0
+    - social-auth-core >=7.2.0,<8.0.0
 tests:
   - python:
       imports:
