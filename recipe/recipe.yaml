@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 8.1.0
+  version: "8.2.0"
 
 package:
   name: social-auth-app-django
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/s/social-auth-app-django/social_auth_app_django-${{ version }}.tar.gz
-  sha256: df67120883ca1cbeb71843159b042ac82f719d4f777082a350ad94e4b3f74811
+  sha256: 0fa6809863a821904e5c104e72e30eb8c9ff48720a97c341deb3e29a04122822
 
 build:
   number: 0
